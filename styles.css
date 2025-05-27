@@ -1,0 +1,142 @@
+:root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --light: #f4f4f4;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    nav i {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .section {
+      display: none;
+      padding: 2rem 1rem;
+      animation: fade 0.4s ease-in-out;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ecf0f1;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .profil-img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profil-img-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .profil-img {
+    width: 48%;
+    max-width: none;
+    }
+
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
